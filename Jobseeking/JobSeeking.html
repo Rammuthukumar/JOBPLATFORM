@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/JobSeeking.css">
+    <link rel="stylesheet" href="/styles/SavedJobs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+        <div class="job-header">
+            <div class="middle-section">
+                <input type="search" class="search-bar js-search-bar" placeholder="Search By Category">
+                <button class="search-button js-search-button">
+                    
+                    <img class="search-icon" src="/images/search-icon.png">
+                  </button>
+            </div>
+            <div class="right-section"></div>
+                <div class="saved-job-container-header">
+                    <a href="SavedJobs.html">
+                        <button class="saved-job js-jb-saved-job">Saved Jobs</button></a> 
+                    <span class="saved-job-quantity-notification js-saved-job-count">1</span>
+                </div>
+                <div class="notification-container">
+                    <img class="notification-icon" src="/images/notifications.svg">
+                    <div class="notification-count js-notification-count"></div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="jb-container js-jb-container">
+
+    </div>
+    <div class="jb-overlay">
+
+    </div>
+    <div class="jb-popup">
+       
+    </div>
+    <div class="jb-popup-application">
+        <form action="#">
+            <div class="form-container">
+                <div class="form-section-one">
+                    <div class="input-group">
+                        <label for="first-name">First name :</label>
+                        <input type="text" class="firstname" name="first-name" >
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name">Last name :</label>
+                        <input type="text" name="last-name" class="lastname" >
+                        <div class="error"></div>
+                    </div>          
+                    <div class="input-group">
+                        <label for="email">Email :</label><br>
+                        <input type="email" name="email" class="email" >
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="form-section-two">
+                    <div class="input-group">
+                        <label for="mobile-number">Mobile no :</label>
+                        <input type="text" name="mobile-number" class="mobile-number" >
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="skills">Skills :</label>
+                        <input type="text" class="skills" name="skills">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="short-disc">Short disc about you :</label>
+                        <input type="textarea" class="short-disc" name="short-disc">
+                        <div class="error"></div>
+                    </div>
+                  <!--  <div class="input-group">
+                        <label for="resume-file">Upload Resume :</label>
+                        <input type="file" name="resume-file" class="resume-file">
+                    </div> -->
+                    
+                </div>
+            </div>
+            
+            <div class="button-container-submit-job">
+                <button class="submit-job js-jb-submit-job" type="submit" >Submit</button>
+            </div>
+       </form>
+       
+       <button class="cancel-job-application js-jb-cancel-application">&#x2715</button>
+    </div>
+
+    <div class="notification-popup-container js-notification-popup-container">
+        <div class="notification-container-list js-notification-container-list">
+                
+        </div>
+    </div>
+
+    <div class="toast-container">
+       
+    </div>
+
+    <script type="module" src="/scripts/JobSeeking.js"></script>
+</body>
+</html>

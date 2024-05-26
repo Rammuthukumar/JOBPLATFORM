@@ -1,0 +1,330 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 95%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job-header{
+    background-color:rgb(226, 226, 226) ;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    
+}
+
+.middle-section{
+    flex: 1;
+    max-width: 650px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.search-bar {
+    flex: 1;
+    width: 0;
+    font-size: 16px;
+    height: 38px;
+    padding-left: 15px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+.search-bar::placeholder{
+    color: rgb(126, 118, 118);
+    
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+.search-button {
+    background-color: rgb(255, 166, 2);
+    border: none;
+    width: 45px;
+    height: 38px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  
+.search-icon {
+    height: 20px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+
+.container{
+    padding: 10px;
+    display: grid;
+    margin-top: 70px; 
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:400px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.job-container{
+    padding: 15px;
+    border: 1px solid rgb(143, 143, 143);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 2px  rgba(95, 95, 95, 0.25);
+}
+
+
+.job-title{
+    color:rgb(12, 12, 117);
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.company-name,.location{
+    font-size: 18px;
+    color: rgb(82, 81, 81);
+}
+
+.time{
+    font-size: 12px;
+    margin-top: 4px;
+    color: grey;
+}
+
+.edit-button,.delete-button{
+    margin-top: 10px;  
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+    font-size: 16px;
+
+}
+
+.button-job-container{
+    display: flex;
+    justify-content: right;
+    
+}
+
+.edit-button{
+    margin-right: 5px;
+    width: 70px;
+    background-color: rgb(12, 12, 117);
+    color: white;
+    border: 1px solid rgb(12, 12, 117);
+    transition: background-color 0.15s ,color 0.15s; 
+}
+
+.applicants-quantity{
+    margin-top: 5px;
+    color: rgb(243, 37, 37);
+    text-decoration: none;
+    width: 100px;
+    margin-left: -2px;
+
+}
+
+.applicant-quantity-btn{
+    background-color: white;
+    border: none;
+    color: green;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.edit-button:hover{
+    color: rgb(12, 12, 117);
+    border-color: rgb(12, 12, 117);
+    background-color: white;
+}
+
+.delete-button{
+   border: 1px solid rgb(12, 12, 117);
+   color: rgb(12, 12, 117);
+   width: 70px;
+   
+}
+
+.overlay{
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+}
+
+.popup{
+    background-color: white;
+    width: 40%;
+    padding:30px;
+    border-radius: 3px;
+    position: absolute;
+    top: 6%;
+    left: 26%;
+    z-index: 4;
+    border: 1px solid rgb(116, 116, 116);
+    color: rgb(12, 12, 117);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    height: 80%;
+    padding-right: 50px;
+    display: none;
+}
+
+.popup div{
+    font-size: large;
+    font-weight: 600;
+    margin-left: 6px;
+    margin-bottom: 4px;
+    margin-top: -5px;
+
+}
+
+.add-job,.save-job,.stop-application{
+    margin-top: 10px;
+}
+
+.add-job,.save-job{
+    background-color: rgb(12, 12, 117);
+    color: white;
+    border: 1px solid rgb(12, 12, 117);
+    width: 70px;
+    padding: 4px;
+    border-radius: 2px;
+    margin-left: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+}
+
+.save-job{
+    display: none;
+}
+
+.cancel-job{
+    color: rgb(0, 0, 0);
+    border: none;
+    width: fit-content;
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.15s background-color 0.15s;
+}
+
+.cancel-job:hover{
+    background-color: red;
+    color: white;
+}
+
+.popup input{
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 4px;
+    padding: 5px;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(109, 109, 109);
+    
+}
+
+.popup input::placeholder,
+.popup textarea::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.popup input:focus,
+.popup textarea:focus{
+    outline: none;
+}
+
+.popup textarea{
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(92, 92, 92);
+}
+
+.add-new-job-btn{
+    background-color: rgb(12, 12, 117);
+    padding: 20px;
+    border-radius: 70px;
+    cursor: pointer;
+    border:none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: width 1s ;
+}
+
+.add-new-job-btn:hover{
+    width: 160px;
+}
+.add-new-job-icon{
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.add-new-job{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    display: none;
+    transition: width 1s ;
+}
+
+.add-new-job-btn:hover .add-new-job{
+    display: inline;
+    width: 90px;
+}
+
+
+.stop-application{
+    padding: 4px 8px;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    display: none;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/JobSeeking.css">
+    <link rel="stylesheet" href="/styles/SavedJobs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="sj-container">
+    </div>
+    <div class="jb-overlay sj-overlay">
+
+    </div>
+    <div class="jb-popup-application">
+        <form action="#">
+            <div class="form-container">
+                <div class="form-section-one">
+                    <label for="first-name">First name :</label>
+                    <input type="text" class="firstname" name="first-name" required><br>
+                    <label for="last-name">Last name :</label>
+                    <input type="text" name="last-name" class="lastname" required><br>
+                    <label for="email">Email :</label><br>
+                    <input type="email" name="email" class="email" required><br>
+                    <label for="mobile-number">Mobile no :</label>
+                    <input type="text" name="mobile-number" class="mobile-number" required><br>
+                </div>
+                <div class="form-section-two">
+                    <label for="skills">Skills :</label>
+                    <input type="text" class="skills" name="skills"><br>
+                    <label for="short-disc">Short disc about you :</label>
+                    <input type="textarea" class="short-disc" name="short-disc"><br>
+                    <label for="resume-file">Upload Resume :</label>
+                    <input type="file" name="resume-file" class="resume-file">
+                </div>
+            </div>
+            <button class="submit-job js-sj-submit-job">Submit</button>
+       </form>
+       <button class="cancel-job-application js-jb-cancel-application">&#x2715</button>
+    </div>
+
+    <script type="module" src="/scripts/JobSaved.js"></script>
+</body>
+</html>

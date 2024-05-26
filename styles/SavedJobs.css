@@ -1,0 +1,16 @@
+.notification-container{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 1px;
+    right: 100px;
+}
+
+.notification-button{
+    border: none;
+    background-color: rgb(226, 226, 226);
+    border-radius: 50%;
+    padding: 5px ;
+}
+
+

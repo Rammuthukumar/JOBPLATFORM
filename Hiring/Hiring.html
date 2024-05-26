@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/Hiring.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="job-header">
+        <div class="middle-section">
+            <input type="search" class="search-bar js-search-bar" placeholder="Search By Category">
+            <button class="search-button js-search-button">
+                <img class="search-icon" src="/images/search-icon.png">
+              </button>
+        </div>
+    </div>
+   <div class="container js-container">
+   </div>
+
+   <div class="overlay">
+   </div>
+   <div class="popup">
+    <div>Add Job Details</div>
+    <form action="">
+        <input type="text" placeholder="Job Title" name="JobTitle" class="js-job-title">
+        <input type="text" placeholder="Job Id" name="JobId" class="js-job-id">
+        <input type="text" placeholder="Company name" name="companyName" class="js-company-name">
+        <input type="text" placeholder="Location" name="location" class="js-location">
+        <input type="text" placeholder="Salary" name="salary" class="js-salary">
+        <input type="text" placeholder="Job Mode" name="jobMode" class="js-job-mode">
+        <input type="text" placeholder="Job Type" name="jobType" class="js-job-type">
+        <textarea placeholder="Job requirements" name="jobRequirements" class="js-requirements" cols="30" rows="3"></textarea>
+        <button class="add-job">Add</button>
+        <button class="save-job">Save</button>
+        <button class="stop-application js-stop-application">Stop Accepting Application</button>
+        <button class="cancel-job">&#x2715</button>
+    </form>
+   </div>
+   <button class="add-new-job-btn">
+        <i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i>
+        <span class="add-new-job">Add New Job</span>
+    </button>
+
+    <script type="module" src="/scripts/Hiring.js"></script>
+</body>
+</html>

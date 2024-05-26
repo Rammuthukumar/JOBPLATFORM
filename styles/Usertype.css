@@ -1,0 +1,54 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.container{
+    position: fixed;
+    top: 40%;
+    left: 35%;
+    border: 1px solid black;
+    padding: 20px 10px ;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.hiring-button,
+.job-seeking-button{
+    margin-top: 8px;
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.hiring-button{
+    width: 150px;
+    background-color: rgb(131, 28, 228);
+    color: white;
+    border-radius: 2px;
+    transition: background-color .25s , color .25s;
+}
+
+.hiring-button:hover{
+    background-color: white;
+    color: rgb(130, 0, 252);
+    border:1px solid rgb(132, 0, 255);
+
+}
+
+.job-seeking-button{
+    width: 150px;
+    background-color: rgb(3, 139, 3);
+    color: white;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: background-color .25s , color .25s;
+}
+
+.job-seeking-button:hover{
+    background-color: white;
+    color: rgb(3, 139, 3);
+    border:1px solid rgb(3, 139, 3);
+   
+}
